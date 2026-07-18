@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ENGLISH JUNIOR - Trang mẫu Bootstrap</title>
+
+  <!-- ===== 1. CSS của Bootstrap 5.3.8 (luôn đặt trong <head>) ===== -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <!-- ===== Bootstrap Icons (để dùng icon như điện thoại, sao...) ===== -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- ===== CSS riêng của bạn (chỉ vài dòng nhỏ, còn lại để Bootstrap lo) ===== -->
+  <style>
+    /* Cho phần hero (đầu trang) có nền màu để nổi bật */
+    .hero {
+      background-color: #0d6efd;
+      /* màu xanh primary của Bootstrap */
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================================= -->
+  <!-- 2. NAVBAR (thanh điều hướng) - lấy từ component Navbar         -->
+  <!-- ============================================================= -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <!-- Tên thương hiệu -->
+      <a class="navbar-brand fw-bold" href="#">ENGLISH JUNIOR</a>
+
+      <!-- Nút hamburger (hiện trên màn hình nhỏ / điện thoại) -->
+       <a href="https://junior.openenglish.com/login">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+        aria-controls="menu" aria-expanded="false" aria-label="Mở menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      </a>
+      <!-- Các link trong menu -->
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Trang chủ</a></li>
+          <li class="nav-item"><a class="nav-link" href="src/gioithieu.html">Giới thiệu</a></li>
+          <li class="nav-item"><a class="nav-link" href="src/banggia.html">Bảng giá</a></li>
+          <li class="nav-item"><a class="nav-link" href="src/lienhe.html">Liên hệ</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================================= -->
+  <!-- 3. HERO (phần giới thiệu đầu trang) - dùng Grid (row/col)      -->
+  <!-- ============================================================= -->
+  <section id="hero" class="hero py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Cột trái: chữ -->
+        <div class="col-lg-6 text-center text-lg-start">
+          <h1 class="display-4 fw-bold">Tiếng Anh không chỉ là một ngôn ngữ, đó là chiếc chìa khóa mở ra cánh cửa của tri thức và cơ hội toàn cầu.</h1>
+          <p class="lead my-4">Dễ dàng, gần gũi và tin cậy.</p>
+        <a href="https://junior.openenglish.com/login"> <button class="btn btn-light btn-lg me-2"> 
+            <i class="bi bi-apple"></i> App Store 
+          </button> </a> 
+          <a href="https://junior.openenglish.com/login"><button class="btn btn-outline-light btn-lg">
+            <i class="bi bi-google-play"></i> Google Play
+          </button></a>
+        </div>
+        <!-- Cột phải: ảnh minh hoạ (dùng placeholder cho gọn) -->
+        <div class="col-lg-6 text-center mt-4 mt-lg-0">
+          <img src="img/đaw.jpg" class="img-fluid rounded shadow"
+            alt="Ảnh sản phẩm">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================= -->
+  <!-- 4. FEATURES (tính năng) - dùng Grid + Icon                    -->
+  <!-- ============================================================= -->
+  <section id="features" class="py-5">
+    <div class="container text-center">
+      <div class="row g-4">
+
+        <div class="col-md-4">
+          <i class="bi bi-check-circle-fill text-primary fs-1"></i>
+          <h3 class="h5 mt-3">Dễ sử dụng</h3>
+          <p class="text-secondary">Giao diện đơn giản, ai cũng dùng được ngay.</p>
+        </div>
+
+        <div class="col-md-4">
+          <i class="bi bi-heart-fill text-primary fs-1"></i>
+          <h3 class="h5 mt-3">Đáng tin cậy</h3>
+          <p class="text-secondary">Hoạt động ổn định, hoàn tiền nếu không hài lòng.</p>
+        </div>
+
+        <div class="col-md-4">
+          <i class="bi bi-bullseye text-primary fs-1"></i>
+          <h3 class="h5 mt-3">Chính xác</h3>
+          <p class="text-secondary">Kết quả nhanh và đúng theo nhu cầu của bạn.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================= -->
+  <!-- 5. PRICING (bảng giá) - dùng component Card                   -->
+  <!-- ============================================================= -->
+  <section id="pricing" class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Bảng giá cho mọi người</h2>
+        <p class="text-secondary">Đơn giản, minh bạch và phù hợp túi tiền.</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+
+        <!-- Gói 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card shadow-sm h-100">
+            <div class="card-header text-center">
+              <h4 class="my-2">Miễn phí</h4>
+            </div>
+            <div class="card-body text-center">
+              <h2 class="card-title">0đ</h2>
+              <p>5 lượt mỗi ngày</p>
+              <p>10 tin nhắn mỗi ngày</p>
+              <p>Dùng cơ bản</p>
+              <button class="btn btn-outline-primary w-100 mt-3">Đăng ký</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gói 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card shadow-sm h-100">
+            <div class="card-header text-center">
+              <h4 class="my-2">Tiêu chuẩn</h4>
+            </div>
+            <div class="card-body text-center">
+              <h2 class="card-title">99k / tháng</h2>
+              <p>Không giới hạn lượt</p>
+              <p>Không giới hạn tin nhắn</p>
+              <p>Dùng đầy đủ</p>
+              <button class="btn btn-primary w-100 mt-3">Đăng ký</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gói 3 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card shadow-sm h-100">
+            <div class="card-header text-center">
+              <h4 class="my-2">Cao cấp</h4>
+            </div>
+            <div class="card-body text-center">
+              <h2 class="card-title">199k / tháng</h2>
+              <p>Ưu tiên hỗ trợ</p>
+              <p>Không giới hạn tất cả</p>
+              <p>Tính năng mới sớm nhất</p>
+              <button class="btn btn-primary w-100 mt-3">Đăng ký</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================= -->
+  <!-- 6. CALL TO ACTION (kêu gọi tải app)                           -->
+  <!-- ============================================================= -->
+  <section class="hero py-5 text-center">
+    <div class="container">
+      <h2 class="fw-bold mb-4">Tải ứng dụng ngay hôm nay</h2>
+    <a href="https://junior.openenglish.com/login"> <button class="btn btn-light btn-lg me-2"><i class="bi bi-apple"></i> App Store</button></a>
+      <a href="https://junior.openenglish.com/login"><button class="btn btn-outline-light btn-lg"><i class="bi bi-google-play"></i> Google Play</button></a>
+    </div>
+  </section>
+
+  <!-- ============================================================= -->
+  <!-- 7. CONTACT (Liên hệ / báo giá) - dùng component Form          -->
+  <!-- ============================================================= -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Liên hệ &amp; nhận báo giá</h2>
+        <p class="text-secondary">Để lại thông tin, chúng tôi sẽ gửi bảng giá chi tiết cho bạn.</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-7">
+          <!-- action: nơi gửi dữ liệu | method="post": cách gửi (giống file ss8.html bạn học) -->
+          <form action="/submit_form" method="post">
+
+            <div class="row g-3">
+              <!-- Họ tên -->
+              <div class="col-md-6">
+                <label for="name" class="form-label">Họ và tên</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Nguyễn Văn A">
+              </div>
+
+              <!-- Email -->
+              <div class="col-md-6">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="ban@email.com">
+              </div>
+
+              <!-- Số điện thoại -->
+              <div class="col-md-6">
+                <label for="phone" class="form-label">Số điện thoại</label>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="09xx xxx xxx">
+              </div>
+
+              <!-- Chọn gói quan tâm (component Select) -->
+              <div class="col-md-6">
+                <label for="plan" class="form-label">Gói quan tâm</label>
+                <select class="form-select" id="plan" name="plan">
+                  <option selected>-- Chọn gói --</option>
+                  <option value="free">Miễn phí</option>
+                  <option value="standard">Tiêu chuẩn</option>
+                  <option value="premium">Cao cấp</option>
+                  <option value="enterprise">Doanh nghiệp (báo giá riêng)</option>
+                </select>
+              </div>
+
+              <!-- Lời nhắn (textarea) -->
+              <div class="col-12">
+                <label for="message" class="form-label">Lời nhắn</label>
+                <textarea class="form-control" id="message" name="message" rows="4"
+                  placeholder="Bạn cần hỗ trợ gì?"></textarea>
+              </div>
+
+              <!-- Checkbox đồng ý -->
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="agree" name="agree">
+                  <label class="form-check-label" for="agree">Tôi đồng ý nhận báo giá qua email.</label>
+                </div>
+              </div>
+
+              <!-- Nút gửi -->
+              <div class="col-12 text-center">
+                <button type="submit" class="btn btn-primary btn-lg px-5">Gửi yêu cầu</button>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================= -->
+  <!-- 8. FOOTER (chân trang)                                        -->
+  <!-- ============================================================= -->
+  <footer id="footer" class="bg-dark text-white py-4 text-center">
+    <div class="container">
+      <a href="#" class="text-white fs-4 mx-2"><i class="bi bi-twitter-x"></i></a>
+      <a href="#" class="text-white fs-4 mx-2"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="text-white fs-4 mx-2"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="text-white fs-4 mx-2"><i class="bi bi-envelope-fill"></i></a>
+      <p class="mt-3 mb-0 text-secondary">© 2026 ENGLISH JUNIOR. Trang giới thiệu khóa học ENGLISH JUNIOR.</p>
+    </div>
+  </footer>
+
+  <!-- ===== 8. JavaScript của Bootstrap (đặt trước </body>) ===== -->
+  <!-- File "bundle" đã gồm cả Popper, cần cho navbar collapse, dropdown, modal... -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
